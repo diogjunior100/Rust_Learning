@@ -1,8 +1,24 @@
 const PI:f32 = 3.14;
 static GLOBAL:u32 = 1;
 
-fn main(){
+fn sombra(){
+    let a = 123;
 
+    {
+        let b = 456;
+        let a = 777;
+        println!("dentro, b {}", b);
+        println!("dentro, a {}", a);
+
+    }
+    //println!("fora, b {}", b);
+    println!("fora, a {}", a);
+    
+
+}
+
+
+fn escopo(){
     //variaveis diferentes tipos
     let variavel:i32 = 128;
     let decimal: f32 = 2.5;
@@ -19,4 +35,12 @@ fn main(){
     println!("Constantes {}", PI);
     println!("Global {}", GLOBAL);
 
+
+
+
+}
+
+fn main(){
+    escopo();
+    sombra();
 }
