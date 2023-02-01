@@ -1,6 +1,15 @@
 const PI:f32 = 3.14;
 static GLOBAL:u32 = 1;
 
+fn soma(a:i32, b:i32) -> i32{
+    let soma:i32 = a + b;
+
+    println!("A soma de {} + {} eh igual a {}", a, b, soma);
+
+    return soma;
+
+}
+
 fn sombra(){
     let a = 123;
 
@@ -43,4 +52,6 @@ fn escopo(){
 fn main(){
     escopo();
     sombra();
+
+    println!("Soma {}", soma(2,2));
 }
