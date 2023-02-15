@@ -55,8 +55,14 @@ fn main(){
 
     println!("Soma {}", soma(2,2));
     println!();
- 
-    let idade = 42;
+    
+    condicionais();
+    loops();
+
+}
+
+fn condicionais (){
+    let idade: u8 = 42;
     let responsavel = false;
 
     if idade < 18 || responsavel {
@@ -69,4 +75,46 @@ fn main(){
     else{
         println!("Pode entrar");
     }
+
+    let condicao = if idade > 18 {"maior"} else {"menor"};
+    println!("E {} idade", condicao);
+
+    let linguagem = "Python";
+    let proposito = match linguagem {
+        "PHP" => "WEB",
+        "Python" => "DATA SCIENCE",
+        _ => "DESCONHECIDO"
+    };
+
+    println!("{} {}",linguagem, proposito);
+
+}
+
+fn loops() {
+
+    let multiplicador: u8 = 5;
+    let mut contator:u8 = 0;
+
+    while contator < 10{
+        contator += 1;
+        println!("{} x {} = {}", multiplicador, contator, multiplicador*contator);
+
+    }
+
+    contator = 0;
+
+    loop{
+        contator += 1;
+        println!("{} x {} = {}", multiplicador, contator, multiplicador*contator);
+
+        if contator == 10 {
+            break;
+        }
+    }
+
+    for i in 1..=10 {
+        println!("{} x {} = {}", multiplicador, i, multiplicador*i);
+
+    }
+  
 }
