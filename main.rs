@@ -31,13 +31,13 @@ fn escopo(){
     //variaveis diferentes tipos
     let variavel:i32 = 128;
     let decimal: f32 = 2.5;
-    let mut boolean:bool = false;
-    boolean = true;
+    //let boolean:bool = false;
+    //boolean = true;
     let letra:char = 'a';
 
     println!("Inteiro {}, tamanho {} bytes", variavel, std::mem::size_of_val(&variavel));
     println!("Decimal {}, tamanho {} bytes", decimal, std::mem::size_of_val(&decimal));
-    println!("Boolean {}, tamanho {} bytes", boolean, std::mem::size_of_val(&boolean));
+    //println!("Boolean {}, tamanho {} bytes", boolean, std::mem::size_of_val(&boolean));
     println!("Letra {}, tamanho {} bytes", letra, std::mem::size_of_val(&letra));
 
     //constantes
@@ -54,4 +54,19 @@ fn main(){
     sombra();
 
     println!("Soma {}", soma(2,2));
+    println!();
+ 
+    let idade = 42;
+    let responsavel = false;
+
+    if idade < 18 || responsavel {
+        println!("nao pode entrar");
+
+    }
+    else if idade == 42 {
+        println!("tambem nao pode")
+    }
+    else{
+        println!("Pode entrar");
+    }
 }
