@@ -58,7 +58,7 @@ fn main(){
     
     condicionais();
     loops();
-
+    ownership();
 }
 
 fn condicionais (){
@@ -117,4 +117,17 @@ fn loops() {
 
     }
   
+}
+
+fn ownership() {
+    let mut uma_string = String::from("Diogenes");
+    rouba(&mut uma_string);
+
+    println!("{}", uma_string);
+
+}
+
+fn rouba(string: &mut String){
+    string.push_str(" Dantas");
+    println!("{}", string);
 }
